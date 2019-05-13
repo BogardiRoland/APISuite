@@ -5,13 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace RecipeManagerAPI.Models
+namespace APIServer.Models
 {
-    public class RecipeManager
+    public class Manager
     {
         private IMongoDatabase database;
 
-        public RecipeManager (string databaseName)
+        public Manager (string databaseName)
         {
             var client = new MongoClient();
             database = client.GetDatabase(databaseName);

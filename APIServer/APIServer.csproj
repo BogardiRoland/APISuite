@@ -105,9 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\RecipesController.cs" />
+    <Compile Include="Controllers\WebController.cs" />
     <Compile Include="Models\Recipe.cs" />
-    <Compile Include="Models\RecipeManager.cs" />
+    <Compile Include="Models\Manager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

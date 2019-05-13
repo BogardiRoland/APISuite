@@ -1,4 +1,4 @@
-﻿using RecipeManagerAPI.Models;
+﻿using APIServer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,20 +6,20 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace RecipeManagerAPI.Controllers
+namespace APIServer.Controllers
 {
-    public class RecipesController : ApiController
+    public class WebController : ApiController
     {
-        private RecipeManager manager = new RecipeManager (databaseName: "RecipeManager");
+        private Manager manager = new Manager (databaseName: "RecipeManager");
 
         [HttpGet]
-        public List<Recipe> GetAllRecipes ()
+        public List<Recipe> GetAll ()
         {
             return manager.GetAll<Recipe>("Recipes");
         }
 
         [HttpPost]
-        public void AddNewRecipe([FromBody]Recipe payload)
+        public void AddNew([FromBody]Recipe payload)
         {
             manager.CreateNew("Recipes", new Recipe {
                 Name = payload.Name,
