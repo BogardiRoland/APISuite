@@ -8,9 +8,9 @@ using System.Web.Http;
 
 namespace APIServer.Controllers
 {
-    public class WebController : ApiController
+    public class RecipesController : ApiController
     {
-        private Manager manager = new Manager (databaseName: "RecipeManager");
+        private Manager manager = new Manager (databaseName: "Manager");
 
         [HttpGet]
         public List<Recipe> GetAll ()
